@@ -2,7 +2,7 @@
 <?php
 /* https://selftaughtcoders.com/php-variables-functions-arrays-loops/ */
 
-$names = array(
+$people = array(
   array('Bob', 20),
   array('Sally', 22),
   array('Tom', 22),
@@ -11,10 +11,10 @@ $names = array(
 
 function printPerson(string $name, int $number, int $age) {
   echo "$name is person #$number, they are $age years old\n";
-};
+}
 /* printPerson('James', 1, 33); */
 
-for($i=1; $i<=count($names); $i++) {
-  printPerson($names[$i-1][0], $i, $names[$i-1][1]);
+for($i=0; $i<count($people); $i++) {
+  printPerson($people[$i][0], $i+1, $people[$i][1]);
 }
 ?>
