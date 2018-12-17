@@ -15,15 +15,15 @@ class Game {
     'scissors' => 'paper'
   ];
 
-  public function __construct($player1, $player2) {
+  public function __construct(String $player1, String $player2) {
     $this->player1 = strtolower($player1);
     $this->player2 = strtolower($player2);
   }
 
-  public function getWinner() {
+  public function getWinner(): String {
 
-    if ($this->player1 == $this->player2) return 'draw';
-    return $this->whoBeatsWho[$this->player1] == $this->player2
+    if ($this->player1 === $this->player2) return 'draw';
+    return $this->whoBeatsWho[$this->player1] === $this->player2
       ? 'player1 wins'
       : 'player2 wins';
   }
